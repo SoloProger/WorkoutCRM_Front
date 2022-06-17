@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {WorkoutStateService} from "../services/workout-state.service";
-import {WorkoutStateHandlerService} from "../services/workout-state-handler.service";
+import {WorkoutTypesStateService} from "../../services/workout-types-state.service";
+import {WorkoutTypesStateHandlerService} from "../../services/workout-types-state-handler.service";
 
 
 @Component({
@@ -13,8 +13,8 @@ export class WorkoutCreateFormComponent implements OnInit {
   public types$ = this.state.workoutTypes$;
 
   constructor(
-    private readonly state: WorkoutStateService,
-    private readonly stateHandler: WorkoutStateHandlerService,
+    private readonly state: WorkoutTypesStateService,
+    private readonly stateHandler: WorkoutTypesStateHandlerService,
   ) {
 
   }
