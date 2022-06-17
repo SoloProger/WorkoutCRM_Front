@@ -1,0 +1,41 @@
+{
+  "workouts": [
+    {
+      "id": 1,
+      "workoutName": "Тренировка 1",
+      "exerciseSetTimeout": "60 сек",
+      "cyclesCount": 12
+    }
+  ],
+  "workoutTypes": [
+    {
+      "id": 1,
+      "typeName": "Силовая тренировка",
+      "value": "power"
+    },
+    {
+      "id": 2,
+      "typeName": "Выносливость",
+      "value": "stamina"
+    },
+    {
+      "id": 3,
+      "typeName": "Круговая тренировка",
+      "value": "cycle"
+    }
+  ],
+  "exercises": [
+    {
+      "id": 1,
+      "exerciseName": "Прыжки"
+    },
+    {
+      "id": 2,
+      "exerciseName": "Отжимания"
+    },
+    {
+      "id": 1,
+      "exerciseName": "Приседания"
+    }
+  ]
+}

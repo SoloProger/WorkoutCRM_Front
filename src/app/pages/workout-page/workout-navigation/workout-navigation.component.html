@@ -1,0 +1,11 @@
+<p-tabMenu [model]="workoutTabs"></p-tabMenu>
+<div *ngIf="activeWorkoutTab === 0" class="workout-create-form">
+  <app-workout-create-form></app-workout-create-form>
+</div>
+<div *ngIf="activeWorkoutTab === 1">
+  <app-workout-created-table></app-workout-created-table>
+</div>
+<div *ngIf="activeWorkoutTab === 2">
+  <app-workout-load-table></app-workout-load-table>
+</div>
+
