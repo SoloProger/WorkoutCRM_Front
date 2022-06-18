@@ -13,7 +13,6 @@ export class WorkoutCreateFormComponent implements OnInit {
 
   public types$ = this.state.workoutTypes$;
 
-  public exerciseMock!: Exercise[];
 
   constructor(
     private readonly state: WorkoutTypesStateService,
@@ -24,11 +23,6 @@ export class WorkoutCreateFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.stateHandler.handlerTypes();
-    this.exerciseMock = [
-      {exerciseName: 'Прыжки', value: 'jumps'},
-      {exerciseName: 'Бег', value: 'run'},
-      {exerciseName: 'Подтягивания', value: 'pull ups'}
-    ]
   }
 
 }

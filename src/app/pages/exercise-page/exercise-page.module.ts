@@ -10,13 +10,20 @@ import {ExerciseStateHandlerService} from "./services/exercise-state-handler.ser
 import {ExerciseTableService} from "./services/exercise-table.service";
 import {TableModule} from "primeng/table";
 import {ButtonModule} from "primeng/button";
+import {
+  AddEditExerciseFormDialogComponent
+} from './components/add-edit-exercise-form-dialog/add-edit-exercise-form-dialog.component';
+import {ExerciseDialogService} from "./services/exercise-dialog.service";
+import {ExerciseFormService} from "./services/exercise-form.service";
+import {DialogService} from "primeng/dynamicdialog";
 
 
 @NgModule({
   declarations: [
     ExercisePageComponent,
     ExerciseTableComponent,
-    ExerciseTablePipePipe
+    ExerciseTablePipePipe,
+    AddEditExerciseFormDialogComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +40,10 @@ import {ButtonModule} from "primeng/button";
     ExerciseHttpService,
     ExerciseStateService,
     ExerciseStateHandlerService,
-    ExerciseTableService
+    ExerciseTableService,
+    ExerciseDialogService,
+    DialogService,
+    ExerciseFormService
   ]
 })
 export class ExercisePageModule {

@@ -3,6 +3,8 @@ import {ExerciseStateHandlerService} from "../../services/exercise-state-handler
 import {ExerciseStateService} from "../../services/exercise-state.service";
 import {ExerciseTableService} from "../../services/exercise-table.service";
 import {BaseTableColumns} from "../../../../models/BaseTableColumns";
+import {ExerciseDialogService} from "../../services/exercise-dialog.service";
+import {Exercise} from "../../../../models/Exercise";
 
 @Component({
   selector: 'app-exercise-table',
@@ -18,13 +20,21 @@ export class ExerciseTableComponent implements OnInit {
   constructor(
     private readonly stateHandler: ExerciseStateHandlerService,
     private readonly state: ExerciseStateService,
-    private readonly exerciseTableService: ExerciseTableService
+    private readonly exerciseTableService: ExerciseTableService,
+    private readonly exerciseDialogService: ExerciseDialogService,
   ) {
   }
 
   ngOnInit(): void {
     this.stateHandler.getExercises();
     this.columns = this.exerciseTableService.getExerciseTableColumns();
+  }
+
+  public openCreateEditDialog(exercise: Exercise | null): void {
+    this.exerciseDialogService.openExerciseDialog(exercise).subscribe(rawExercise => {
+      exercise ? () => {
+      } : this.stateHandler.createExercise(rawExercise);
+    })
   }
 
 }

@@ -5,7 +5,7 @@
         {{column.header}}
       </th>
       <th>
-        <button pButton icon="pi pi-plus"></button>
+        <button pButton icon="pi pi-plus" (click)="openCreateEditDialog(null)"></button>
       </th>
     </tr>
   </ng-template>
@@ -16,7 +16,8 @@
       </td>
       <td>
         <div class="table-btns">
-          <button pButton icon="pi pi-pencil" class="p-button-success"></button>
+          <button pButton icon="pi pi-pencil" class="p-button-success"
+                  (click)="openCreateEditDialog(exercise)"></button>
           <button pButton icon="pi pi-cloud-download" class="p-button-warning"></button>
           <button pButton icon="pi pi-trash" class="p-button-danger"></button>
         </div>

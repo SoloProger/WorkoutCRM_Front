@@ -1,7 +1,7 @@
 export interface Exercise {
-  id?: number;
+  id: number;
   exerciseName: string;
-  repeatsCount?: string;
-  repeatsCountTimeout?: string;
+  repeatsCount: string;
+  repeatsCountTimeout: string;
   value: string;
 }
