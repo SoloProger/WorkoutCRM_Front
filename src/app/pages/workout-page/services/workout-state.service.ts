@@ -1,20 +1,21 @@
 import {Injectable} from "@angular/core";
 import {BehaviorSubject} from "rxjs";
-import {WorkoutType} from "../../../models/WorkoutType";
+import {Workout} from "../../../models/Workout";
 
 
 @Injectable()
 export class WorkoutStateService {
 
-  private workoutTypes = new BehaviorSubject<WorkoutType[]>([]);
+  private workouts = new BehaviorSubject<Workout[]>([]);
 
-  public workoutTypes$ = this.workoutTypes.asObservable();
+  public workouts$ = this.workouts.asObservable();
 
   constructor() {
   }
 
-  public getStateData(types: WorkoutType[]): void {
-    this.workoutTypes.next(types);
+
+  public getWorkoutsState(data: Workout[]): void {
+    this.workouts.next(data);
   }
 
 }
