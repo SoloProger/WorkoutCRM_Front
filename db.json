@@ -100,16 +100,22 @@
     {
       "id": 1,
       "value": "jumps",
+      "repeatsCount": 12,
+      "repeatsCountTimeout": "30 сек",
       "exerciseName": "Прыжки"
     },
     {
       "id": 2,
       "value": "push ups",
+      "repeatsCount": 10,
+      "repeatsCountTimeout": "40 сек",
       "exerciseName": "Отжимания"
     },
     {
       "id": 1,
       "value": "sit-ups",
+      "repeatsCount": 12,
+      "repeatsCountTimeout": "40 сек",
       "exerciseName": "Приседания"
     }
   ]
