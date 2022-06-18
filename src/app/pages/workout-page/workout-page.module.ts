@@ -22,6 +22,7 @@ import {WorkoutLoadListComponent} from './components/workout-load-list/workout-l
 import {BaseCardModule} from "../../shared/base-card/base-card.module";
 import {BASE_CARD_CONFIG_TOKEN} from "../../shared/tokens/base-card-config-token";
 import {WorkoutLoadCardConfig} from "./config/WorkoutLoadCardConfig";
+import {MultiSelectModule} from "primeng/multiselect";
 
 
 @NgModule({
@@ -34,18 +35,19 @@ import {WorkoutLoadCardConfig} from "./config/WorkoutLoadCardConfig";
     WorkoutLoadListComponent,
 
   ],
-  imports: [
-    RouterModule.forChild([
-      {path: '', component: WorkoutPageComponent}
-    ]),
-    CommonModule,
-    TabMenuModule,
-    InputTextModule,
-    DropdownModule,
-    ButtonModule,
-    TableModule,
-    BaseCardModule,
-  ],
+    imports: [
+        RouterModule.forChild([
+            {path: '', component: WorkoutPageComponent}
+        ]),
+        CommonModule,
+        TabMenuModule,
+        InputTextModule,
+        DropdownModule,
+        ButtonModule,
+        TableModule,
+        BaseCardModule,
+        MultiSelectModule,
+    ],
   providers: [
     WorkoutTypesStateService,
     WorkoutTypesStateHandlerService,

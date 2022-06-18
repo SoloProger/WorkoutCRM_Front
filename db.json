@@ -16,10 +16,12 @@
       "exercises": [
         {
           "id": 1,
+          "value": "jumps",
           "exerciseName": "Прыжки"
         },
         {
           "id": 2,
+          "value": "push ups",
           "exerciseName": "Отжимания"
         }
       ]
@@ -40,10 +42,12 @@
       "exercises": [
         {
           "id": 1,
+          "value": "pull ups",
           "exerciseName": "Подтягивания"
         },
         {
           "id": 2,
+          "value": "bars",
           "exerciseName": "Брусья"
         }
       ]
@@ -64,10 +68,12 @@
       "exercises": [
         {
           "id": 1,
+          "value": "running_in_place",
           "exerciseName": "Бег на месте"
         },
         {
           "id": 2,
+          "value": "skipping rope",
           "exerciseName": "Скакалка"
         }
       ]
@@ -93,14 +99,17 @@
   "exercises": [
     {
       "id": 1,
+      "value": "jumps",
       "exerciseName": "Прыжки"
     },
     {
       "id": 2,
+      "value": "push ups",
       "exerciseName": "Отжимания"
     },
     {
       "id": 1,
+      "value": "sit-ups",
       "exerciseName": "Приседания"
     }
   ]
