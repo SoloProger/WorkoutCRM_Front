@@ -1,18 +1,22 @@
 import {Injectable} from "@angular/core";
-import {WorkoutHttpService} from "./workout-http.service";
 import {WorkoutStateService} from "./workout-state.service";
+import {WorkoutHttpService} from "./workout-http.service";
 
 
 @Injectable()
 export class WorkoutStateHandlerService {
+
+  public workouts$ = this.state.workouts$;
+
   constructor(
-    private readonly workoutHttpService: WorkoutHttpService,
-    private readonly state: WorkoutStateService) {
+    private readonly state: WorkoutStateService,
+    private readonly workoutHttpService: WorkoutHttpService
+  ) {
   }
 
-  public handlerTypes(): void {
-    this.workoutHttpService.getWorkoutTypes().subscribe(types => {
-      this.state.getStateData(types);
+  public getStateHandler(): void {
+    this.workoutHttpService.getWorkouts().subscribe(workouts => {
+      this.state.getWorkoutsState(workouts);
     })
   }
 }

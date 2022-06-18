@@ -3,8 +3,80 @@
     {
       "id": 1,
       "workoutName": "Тренировка 1",
-      "exerciseSetTimeout": "60 сек",
-      "cyclesCount": 12
+      "workoutType": {
+        "id": 1,
+        "typeName": "Силовая",
+        "value": "power"
+      },
+      "exerciseTimeout": "60 сек",
+      "setsCountTimeout": "30 сек",
+      "cyclesCountTimeout": "120 сек",
+      "cyclesCount": 12,
+      "setsCount": 5,
+      "exercises": [
+        {
+          "id": 1,
+          "value": "jumps",
+          "exerciseName": "Прыжки"
+        },
+        {
+          "id": 2,
+          "value": "push ups",
+          "exerciseName": "Отжимания"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "workoutName": "Тренировка 2",
+      "workoutType": {
+        "id": 1,
+        "typeName": "Круговая",
+        "value": "cycle"
+      },
+      "exerciseTimeout": "60 сек",
+      "setsCountTimeout": "30 сек",
+      "cyclesCountTimeout": "120 сек",
+      "cyclesCount": 12,
+      "setsCount": null,
+      "exercises": [
+        {
+          "id": 1,
+          "value": "pull ups",
+          "exerciseName": "Подтягивания"
+        },
+        {
+          "id": 2,
+          "value": "bars",
+          "exerciseName": "Брусья"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "workoutName": "Тренировка 3",
+      "workoutType": {
+        "id": 1,
+        "typeName": "Выносливость",
+        "value": "stamina"
+      },
+      "exerciseTimeout": "60 сек",
+      "setsCountTimeout": "30 сек",
+      "cyclesCountTimeout": null,
+      "cyclesCount": 12,
+      "setsCount": 5,
+      "exercises": [
+        {
+          "id": 1,
+          "value": "running_in_place",
+          "exerciseName": "Бег на месте"
+        },
+        {
+          "id": 2,
+          "value": "skipping rope",
+          "exerciseName": "Скакалка"
+        }
+      ]
     }
   ],
   "workoutTypes": [
@@ -27,14 +99,17 @@
   "exercises": [
     {
       "id": 1,
+      "value": "jumps",
       "exerciseName": "Прыжки"
     },
     {
       "id": 2,
+      "value": "push ups",
       "exerciseName": "Отжимания"
     },
     {
       "id": 1,
+      "value": "sit-ups",
       "exerciseName": "Приседания"
     }
   ]

@@ -1,0 +1,37 @@
+<form class="create-form">
+  <input id="workoutName" type="text" pInputText placeholder="Название тренировки">
+  <div class="form-controls">
+    <input id="setsCount" type="text" pInputText placeholder="Количество подходов">
+    <input id="cyclesCount" type="text" pInputText placeholder="Количество кругов">
+  </div>
+  <div class="form-controls">
+    <input id="exerciseTime" type="text" pInputText placeholder="Время между упражнениями">
+    <input id="setsCountTime" type="text" pInputText placeholder="Время между подходами">
+    <input id="cyclesCountTime" type="text" pInputText placeholder="Время между циклами">
+  </div>
+  <div class="form-controls">
+    <p-multiSelect
+      [options]="exerciseMock"
+      optionValue="value"
+      [showClear]="true"
+      placeholder="Упражнения"
+      optionLabel="exerciseName"
+      appendTo="body"
+      display="chip"></p-multiSelect>
+    <p-dropdown
+      *ngIf="types$ | async as types"
+      [options]="types"
+      optionValue="value"
+      [showClear]="true"
+      placeholder="Тип тренировки"
+      appendTo="body"
+      [autoDisplayFirst]="false"
+      optionLabel="typeName"></p-dropdown>
+  </div>
+
+  <div class="form-btns">
+    <button pButton label="Добавить упражнение к тренировке" class="p-button-secondary"></button>
+    <button pButton label="Добавить новый тип тренировки" class="p-button-secondary"></button>
+    <button pButton label="Создать тренировку" class="p-button-success"></button>
+  </div>
+</form>
