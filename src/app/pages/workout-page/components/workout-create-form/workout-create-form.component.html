@@ -1,12 +1,16 @@
 <form class="create-form">
   <input id="workoutName" type="text" pInputText placeholder="Название тренировки">
   <input id="exerciseTime" type="text" pInputText placeholder="Время между упражнениями">
+  <input id="setsCountTime" type="text" pInputText placeholder="Время между подходами">
+  <input id="cyclesCountTime" type="text" pInputText placeholder="Время между циклами">
+  <input id="setsCount" type="text" pInputText placeholder="Количество подходов">
   <div class="form-controls">
     <input id="cyclesCount" type="text" pInputText placeholder="Количество кругов">
-    <p-dropdown *ngIf="types$ | async as types" [options]="types" optionValue="value" optionLabel="typeName"></p-dropdown>
+    <p-dropdown *ngIf="types$ | async as types" [options]="types" optionValue="value"
+                optionLabel="typeName"></p-dropdown>
   </div>
   <div class="form-btns">
-    <button pButton label="Добавить упражнения" class="p-button-secondary"></button>
+    <button pButton label="Добавить упражнение к тренировке" class="p-button-secondary"></button>
     <button pButton label="Создать тренировку" class="p-button-secondary"></button>
   </div>
 </form>

@@ -4,10 +4,24 @@
       <th *ngFor="let column of columns">
         {{column.header}}
       </th>
+      <th>
+        Действия
+      </th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body">
-    <!--    TODO pipe for table body-->
+  <ng-template pTemplate="body" let-workout>
+    <tr>
+      <td *ngFor="let column of columns">
+        {{workout | workoutTablePipe: column.field }}
+      </td>
+      <td>
+        <div class="table-btns">
+          <button pButton icon="pi pi-pencil" class="p-button-success"></button>
+          <button pButton icon="pi pi-cloud-download" class="p-button-warning"></button>
+          <button pButton icon="pi pi-trash" class="p-button-danger"></button>
+        </div>
+      </td>
+    </tr>
   </ng-template>
   <ng-template pTemplate="emptymessage">
     <tr>

@@ -6,7 +6,6 @@ import {TabMenuModule} from "primeng/tabmenu";
 import {RouterModule} from "@angular/router";
 import {WorkoutCreateFormComponent} from './components/workout-create-form/workout-create-form.component';
 import {WorkoutCreatedTableComponent} from './components/workout-created-table/workout-created-table.component';
-import {WorkoutLoadTableComponent} from './components/workout-load-table/workout-load-table.component';
 import {InputTextModule} from "primeng/inputtext";
 import {DropdownModule} from "primeng/dropdown";
 import {ButtonModule} from "primeng/button";
@@ -18,15 +17,22 @@ import {WorkoutCreatedTableService} from "./services/workout-created-table.servi
 import {WorkoutHttpService} from "./services/workout-http.service";
 import {WorkoutStateService} from "./services/workout-state.service";
 import {WorkoutStateHandlerService} from "./services/workout-state-handler.service";
+import {WorkoutTablePipe} from "./pipes/workout-table.pipe";
+import {WorkoutLoadListComponent} from './components/workout-load-list/workout-load-list.component';
+import {BaseCardModule} from "../../shared/base-card/base-card.module";
+import {BASE_CARD_CONFIG_TOKEN} from "../../shared/tokens/base-card-config-token";
+import {WorkoutLoadCardConfig} from "./config/WorkoutLoadCardConfig";
 
 
 @NgModule({
   declarations: [
+    WorkoutTablePipe,
     WorkoutPageComponent,
     WorkoutNavigationComponent,
     WorkoutCreateFormComponent,
     WorkoutCreatedTableComponent,
-    WorkoutLoadTableComponent
+    WorkoutLoadListComponent,
+
   ],
   imports: [
     RouterModule.forChild([
@@ -38,6 +44,7 @@ import {WorkoutStateHandlerService} from "./services/workout-state-handler.servi
     DropdownModule,
     ButtonModule,
     TableModule,
+    BaseCardModule,
   ],
   providers: [
     WorkoutTypesStateService,
@@ -46,7 +53,8 @@ import {WorkoutStateHandlerService} from "./services/workout-state-handler.servi
     WorkoutCreatedTableService,
     WorkoutHttpService,
     WorkoutStateService,
-    WorkoutStateHandlerService
+    WorkoutStateHandlerService,
+    {provide: BASE_CARD_CONFIG_TOKEN, useValue: WorkoutLoadCardConfig}
   ]
 })
 export class WorkoutPageModule {

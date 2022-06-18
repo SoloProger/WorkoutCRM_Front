@@ -3,9 +3,16 @@
     {
       "id": 1,
       "workoutName": "Тренировка 1",
-      "workoutType": "Силовая",
-      "exerciseSetTimeout": "60 сек",
+      "workoutType": {
+        "id": 1,
+        "typeName": "Силовая",
+        "value": "power"
+      },
+      "exerciseTimeout": "60 сек",
+      "setsCountTimeout": "30 сек",
+      "cyclesCountTimeout": "120 сек",
       "cyclesCount": 12,
+      "setsCount": 5,
       "exercises": [
         {
           "id": 1,
@@ -14,6 +21,54 @@
         {
           "id": 2,
           "exerciseName": "Отжимания"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "workoutName": "Тренировка 2",
+      "workoutType": {
+        "id": 1,
+        "typeName": "Круговая",
+        "value": "cycle"
+      },
+      "exerciseTimeout": "60 сек",
+      "setsCountTimeout": "30 сек",
+      "cyclesCountTimeout": "120 сек",
+      "cyclesCount": 12,
+      "setsCount": null,
+      "exercises": [
+        {
+          "id": 1,
+          "exerciseName": "Подтягивания"
+        },
+        {
+          "id": 2,
+          "exerciseName": "Брусья"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "workoutName": "Тренировка 3",
+      "workoutType": {
+        "id": 1,
+        "typeName": "Выносливость",
+        "value": "stamina"
+      },
+      "exerciseTimeout": "60 сек",
+      "setsCountTimeout": "30 сек",
+      "cyclesCountTimeout": null,
+      "cyclesCount": 12,
+      "setsCount": 5,
+      "exercises": [
+        {
+          "id": 1,
+          "exerciseName": "Бег на месте"
+        },
+        {
+          "id": 2,
+          "exerciseName": "Скакалка"
         }
       ]
     }

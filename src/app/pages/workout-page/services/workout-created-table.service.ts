@@ -11,8 +11,11 @@ export class WorkoutCreatedTableService {
     return [
       {field: 'workoutName', header: 'Название тренировки'},
       {field: 'workoutType', header: 'Тип тренировки'},
-      {field: 'exerciseSetTimeout', header: 'Время отдыха между упражнениями'},
-      {field: 'cyclesCount', header: 'Кол-во кругово'},
+      {field: 'cyclesCount', header: 'Кол-во кругов'},
+      {field: 'setsCount', header: 'Кол-во подходов'},
+      {field: 'exerciseTimeout', header: 'Время отдыха между упражнениями'},
+      {field: 'setsCountTimeout', header: 'Время отдыха между подходами'},
+      {field: 'cyclesCountTimeout', header: 'Время отдыха между кругами'},
       {field: 'exercises', header: 'Список упражнений'}
     ]
   }
