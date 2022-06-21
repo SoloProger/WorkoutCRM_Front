@@ -1,5 +1,30 @@
 {
-  "workouts": [],
+  "workouts": [
+    {
+      "workoutName": "Тренировка 1",
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": [
+        {
+          "exerciseName": "Приседания",
+          "repeatsCount": 20,
+          "repeatsCountTimeout": "40 сек",
+          "id": 1
+        },
+        {
+          "exerciseName": "Подтягивания",
+          "repeatsCount": 12,
+          "repeatsCountTimeout": "60 сек",
+          "id": 4
+        }
+      ],
+      "id": 1
+    }
+  ],
   "workoutTypes": [
     {
       "id": 1,

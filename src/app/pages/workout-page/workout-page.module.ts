@@ -29,6 +29,7 @@ import {ExerciseStateService} from "../exercise-page/services/exercise-state.ser
 import {ExerciseStateHandlerService} from "../exercise-page/services/exercise-state-handler.service";
 import {ExerciseHttpService} from "../exercise-page/services/exercise-http.service";
 import {ExerciseTableService} from "../exercise-page/services/exercise-table.service";
+import { WorkoutEditDialogFormComponent } from './dialogs/workout-edit-dialog-form/workout-edit-dialog-form.component';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import {ExerciseTableService} from "../exercise-page/services/exercise-table.ser
     WorkoutCreateFormComponent,
     WorkoutCreatedTableComponent,
     WorkoutLoadListComponent,
+    WorkoutEditDialogFormComponent,
   ],
   imports: [
     RouterModule.forChild([
