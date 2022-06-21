@@ -98,18 +98,6 @@
   ],
   "exercises": [
     {
-      "exerciseName": "Приседания",
-      "repeatsCount": 20,
-      "repeatsCountTimeout": "40 сек",
-      "id": 1
-    },
-    {
-      "exerciseName": "Приседания",
-      "repeatsCount": 13,
-      "repeatsCountTimeout": "41 сек",
-      "id": 2
-    },
-    {
       "id": 3,
       "value": "sit-ups",
       "repeatsCount": 12,
