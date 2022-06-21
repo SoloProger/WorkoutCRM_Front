@@ -13,7 +13,7 @@ export abstract class AbstractHttpService<T, Y> {
   }
 
   public create(value: Y): Observable<T> {
-    return this.http.post<T>(`http://locahost:3004/${this.endpoint}`, value);
+    return this.http.post<T>(`http://localhost:3004/${this.endpoint}`, value);
   }
 
   public update(valueId: number, value: Y): Observable<T> {

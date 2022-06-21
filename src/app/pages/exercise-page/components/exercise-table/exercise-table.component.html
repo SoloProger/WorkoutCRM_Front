@@ -1,0 +1,33 @@
+<p-table [value]="exercises" [columns]="columns" [loading]="isLoading$ | async">
+  <ng-template pTemplate="header">
+    <tr>
+      <th *ngFor="let column of columns">
+        {{column.header}}
+      </th>
+      <th>
+        <button pButton icon="pi pi-plus" (click)="openCreateEditDialog.emit(null)"></button>
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-exercise>
+    <tr>
+      <td *ngFor="let column of columns">
+        {{exercise | exerciseTablePipe: column.field }}
+      </td>
+      <td>
+        <div class="table-btns">
+          <button pButton icon="pi pi-pencil" class="p-button-success"
+                  (click)="openCreateEditDialog.emit(exercise)"></button>
+          <button pButton icon="pi pi-cloud-download" class="p-button-warning"></button>
+          <button pButton icon="pi pi-trash" class="p-button-danger"
+                  (click)="removeExercise.emit(exercise.id)"></button>
+        </div>
+      </td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage">
+    <tr>
+      <td>Тренировки отсутствуют</td>
+    </tr>
+  </ng-template>
+</p-table>

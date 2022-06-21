@@ -98,19 +98,35 @@
   ],
   "exercises": [
     {
-      "id": 1,
-      "value": "jumps",
-      "exerciseName": "Прыжки"
+      "exerciseName": "Приседания",
+      "repeatsCount": 20,
+      "repeatsCountTimeout": "40 сек",
+      "id": 1
     },
     {
-      "id": 2,
-      "value": "push ups",
-      "exerciseName": "Отжимания"
+      "exerciseName": "Приседания",
+      "repeatsCount": 13,
+      "repeatsCountTimeout": "41 сек",
+      "id": 2
     },
     {
-      "id": 1,
+      "id": 3,
       "value": "sit-ups",
+      "repeatsCount": 12,
+      "repeatsCountTimeout": "40 сек",
       "exerciseName": "Приседания"
+    },
+    {
+      "exerciseName": "Подтягивания",
+      "repeatsCount": 12,
+      "repeatsCountTimeout": "60 сек",
+      "id": 4
+    },
+    {
+      "exerciseName": "Приседания",
+      "repeatsCount": 12,
+      "repeatsCountTimeout": "60 сек",
+      "id": 5
     }
   ]
 }
