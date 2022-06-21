@@ -6,7 +6,7 @@ import {Workout} from "../../../models/Workout";
 })
 export class WorkoutTablePipe implements PipeTransform {
   transform(value: Workout, field: string): string {
-    const fieldDict: { [key: string]: any } = {
+    const fieldDict = {
       workoutName: value.workoutName,
       workoutType: value.workoutType?.typeName,
       exerciseTimeout: value.exerciseTimeout,
@@ -14,9 +14,9 @@ export class WorkoutTablePipe implements PipeTransform {
       cyclesCountTimeout: value.cyclesCountTimeout,
       setsCount: value.setsCount,
       cyclesCount: value.cyclesCount,
-      exercises: value.exercises.map((exercise) => exercise.exerciseName)
+      exercises: value.exercises.map(exercise => exercise.exerciseName)
     };
-    return fieldDict[field] || '-';
+    return fieldDict[field] || value[field] || '-';
   }
 }
 

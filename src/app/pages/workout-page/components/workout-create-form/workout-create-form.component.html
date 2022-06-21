@@ -1,36 +1,41 @@
-<form class="create-form">
-  <input id="workoutName" type="text" pInputText placeholder="Название тренировки">
+<form class="create-form" [formGroup]="workoutForm" (ngSubmit)="submitForm()">
+  <input id="workoutName" type="text" pInputText placeholder="Название тренировки" formControlName="workoutName">
   <div class="form-controls">
-    <input id="setsCount" type="text" pInputText placeholder="Количество подходов">
-    <input id="cyclesCount" type="text" pInputText placeholder="Количество кругов">
+    <input id="setsCount" type="text" pInputText placeholder="Количество подходов" formControlName="setsCount">
+    <input id="cyclesCount" type="text" pInputText placeholder="Количество кругов" formControlName="cyclesCount">
   </div>
   <div class="form-controls">
-    <input id="exerciseTime" type="text" pInputText placeholder="Время между упражнениями">
-    <input id="setsCountTime" type="text" pInputText placeholder="Время между подходами">
-    <input id="cyclesCountTime" type="text" pInputText placeholder="Время между циклами">
+    <input id="exerciseTimeout" type="text" pInputText placeholder="Время между упражнениями"
+           formControlName="exerciseTimeout">
+    <input id="setsCountTimeout" type="text" pInputText placeholder="Время между подходами"
+           formControlName="setsCountTimeout">
+    <input id="cyclesCountTimeout" type="text" pInputText placeholder="Время между циклами"
+           formControlName="cyclesCountTimeout">
   </div>
   <div class="form-controls">
     <p-multiSelect
-      optionValue="value"
+      [options]="exercises$ | async"
       [showClear]="true"
       placeholder="Упражнения"
       optionLabel="exerciseName"
+      formControlName="exercises"
       appendTo="body"
       display="chip"></p-multiSelect>
     <p-dropdown
       *ngIf="types$ | async as types"
       [options]="types"
-      optionValue="value"
+      optionValue="id"
       [showClear]="true"
+      formControlName="workoutTypeId"
       placeholder="Тип тренировки"
       appendTo="body"
       [autoDisplayFirst]="false"
       optionLabel="typeName"></p-dropdown>
   </div>
-
   <div class="form-btns">
     <button pButton label="Добавить упражнение к тренировке" class="p-button-secondary"></button>
     <button pButton label="Добавить новый тип тренировки" class="p-button-secondary"></button>
-    <button pButton label="Создать тренировку" class="p-button-success"></button>
+    <button pButton label="Создать тренировку" class="p-button-success" type="submit"
+            [disabled]="workoutForm.invalid"></button>
   </div>
 </form>

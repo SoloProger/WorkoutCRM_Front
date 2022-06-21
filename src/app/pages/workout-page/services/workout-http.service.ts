@@ -1,15 +1,12 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
 import {Workout} from "../../../models/Workout";
+import {AbstractHttpService} from "../../../abstract/AbstractHttpService";
 
 
 @Injectable()
-export class WorkoutHttpService {
-  constructor(private readonly http: HttpClient) {
-  }
-
-  public getWorkouts(): Observable<Workout[]> {
-    return this.http.get<Workout[]>('http://localhost:3004/workouts');
+export class WorkoutHttpService extends AbstractHttpService<Workout, Workout> {
+  constructor(protected override readonly http: HttpClient) {
+    super('workouts', http)
   }
 }

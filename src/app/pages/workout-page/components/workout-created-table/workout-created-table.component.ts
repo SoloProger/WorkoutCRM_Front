@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {WorkoutStateHandlerService} from "../../services/workout-state-handler.service";
 import {WorkoutCreatedTableService} from "../../services/workout-created-table.service";
 import {BaseTableColumns} from "../../../../models/BaseTableColumns";
+import {Workout} from "../../../../models/Workout";
 
 @Component({
   selector: 'app-workout-created-table',
@@ -10,9 +11,12 @@ import {BaseTableColumns} from "../../../../models/BaseTableColumns";
 })
 export class WorkoutCreatedTableComponent implements OnInit {
 
-  public workouts$ = this.stateHandler.workouts$;
+  @Input()
+  public workouts: Workout[] = []
 
-  public columns!: BaseTableColumns[];
+  public columns: BaseTableColumns[] = this.workoutTableService.getTableColumns();
+
+  public loading$ = this.workoutTableService.loading$;
 
   constructor(
     private readonly stateHandler: WorkoutStateHandlerService,
@@ -22,7 +26,11 @@ export class WorkoutCreatedTableComponent implements OnInit {
 
   ngOnInit(): void {
     this.stateHandler.getStateHandler();
-    this.columns = this.workoutTableService.getTableColumns();
   }
+
+  public deleteWorkout(id: number): void {
+    this.stateHandler.deleteWorkout(id);
+  }
+
 
 }
