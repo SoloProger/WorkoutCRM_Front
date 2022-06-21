@@ -3,7 +3,7 @@
   <app-workout-create-form></app-workout-create-form>
 </div>
 <div *ngIf="activeWorkoutTab === 1" class="workout-created-table">
-  <app-workout-created-table></app-workout-created-table>
+  <app-workout-created-table [workouts]="workouts$ | async"></app-workout-created-table>
 </div>
 <div *ngIf="activeWorkoutTab === 2">
   <app-workout-load-list></app-workout-load-list>

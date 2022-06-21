@@ -23,6 +23,12 @@ import {BaseCardModule} from "../../shared/base-card/base-card.module";
 import {BASE_CARD_CONFIG_TOKEN} from "../../shared/tokens/base-card-config-token";
 import {WorkoutLoadCardConfig} from "./config/WorkoutLoadCardConfig";
 import {MultiSelectModule} from "primeng/multiselect";
+import {WorkoutFormService} from "./services/workout-form.service";
+import {FormBuilder, ReactiveFormsModule} from "@angular/forms";
+import {ExerciseStateService} from "../exercise-page/services/exercise-state.service";
+import {ExerciseStateHandlerService} from "../exercise-page/services/exercise-state-handler.service";
+import {ExerciseHttpService} from "../exercise-page/services/exercise-http.service";
+import {ExerciseTableService} from "../exercise-page/services/exercise-table.service";
 
 
 @NgModule({
@@ -33,21 +39,21 @@ import {MultiSelectModule} from "primeng/multiselect";
     WorkoutCreateFormComponent,
     WorkoutCreatedTableComponent,
     WorkoutLoadListComponent,
-
   ],
-    imports: [
-        RouterModule.forChild([
-            {path: '', component: WorkoutPageComponent}
-        ]),
-        CommonModule,
-        TabMenuModule,
-        InputTextModule,
-        DropdownModule,
-        ButtonModule,
-        TableModule,
-        BaseCardModule,
-        MultiSelectModule,
-    ],
+  imports: [
+    RouterModule.forChild([
+      {path: '', component: WorkoutPageComponent}
+    ]),
+    CommonModule,
+    TabMenuModule,
+    InputTextModule,
+    DropdownModule,
+    ButtonModule,
+    TableModule,
+    BaseCardModule,
+    MultiSelectModule,
+    ReactiveFormsModule,
+  ],
   providers: [
     WorkoutTypesStateService,
     WorkoutTypesStateHandlerService,
@@ -56,6 +62,12 @@ import {MultiSelectModule} from "primeng/multiselect";
     WorkoutHttpService,
     WorkoutStateService,
     WorkoutStateHandlerService,
+    WorkoutFormService,
+    ExerciseStateService,
+    ExerciseStateHandlerService,
+    ExerciseHttpService,
+    ExerciseTableService,
+    FormBuilder,
     {provide: BASE_CARD_CONFIG_TOKEN, useValue: WorkoutLoadCardConfig}
   ]
 })

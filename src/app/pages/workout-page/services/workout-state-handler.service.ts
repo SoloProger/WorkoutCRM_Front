@@ -1,22 +1,30 @@
 import {Injectable} from "@angular/core";
 import {WorkoutStateService} from "./workout-state.service";
 import {WorkoutHttpService} from "./workout-http.service";
+import {WorkoutCreatedTableService} from "./workout-created-table.service";
+import {Workout} from "../../../models/Workout";
 
 
 @Injectable()
 export class WorkoutStateHandlerService {
 
-  public workouts$ = this.state.workouts$;
 
   constructor(
     private readonly state: WorkoutStateService,
-    private readonly workoutHttpService: WorkoutHttpService
+    private readonly api: WorkoutHttpService,
+    private readonly table: WorkoutCreatedTableService,
   ) {
   }
 
   public getStateHandler(): void {
-    this.workoutHttpService.getWorkouts().subscribe(workouts => {
-      this.state.getWorkoutsState(workouts);
-    })
+    this.table.startLoading(this.api.getAll()).subscribe(workouts => this.state.loadState(workouts))
+  }
+
+  public createWorkout(workout: Workout): void {
+    this.api.create(workout).subscribe(data => this.state.createValue(data));
+  }
+
+  public deleteWorkout(id: number): void {
+    this.table.startLoading(this.api.delete(id)).subscribe(() => this.state.deleteValue(id));
   }
 }

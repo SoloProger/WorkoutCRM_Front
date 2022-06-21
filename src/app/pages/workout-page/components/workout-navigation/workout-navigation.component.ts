@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MenuItem} from "primeng/api";
+import {WorkoutStateHandlerService} from "../../services/workout-state-handler.service";
+import {WorkoutStateService} from "../../services/workout-state.service";
 
 @Component({
   selector: 'app-workout-navigation',
@@ -10,9 +12,14 @@ export class WorkoutNavigationComponent implements OnInit {
 
   public workoutTabs!: MenuItem[];
 
+  public workouts$ = this.state.state$;
+
   public activeWorkoutTab: number = 0;
 
-  constructor() {
+  constructor(
+    private readonly state: WorkoutStateService,
+    private readonly handler: WorkoutStateHandlerService
+  ) {
   }
 
   ngOnInit(): void {
