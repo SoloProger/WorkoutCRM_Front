@@ -12,7 +12,7 @@ export class ExerciseFormService {
     return this.fb.group({
       exerciseName: [null, Validators.required],
       repeatsCount: [null],
-      repeatsCountTimeout: [null]
+      repeatsCountTimeout: [null],
     })
   }
 

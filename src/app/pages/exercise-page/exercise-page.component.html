@@ -1,1 +1,5 @@
-<app-exercise-table></app-exercise-table>
+<app-exercise-table
+  (removeExercise)="onDeleteExercise($event)"
+  (openCreateEditDialog)="openExerciseDialog($event)"
+  [exercises]="exercises$ | async"
+></app-exercise-table>

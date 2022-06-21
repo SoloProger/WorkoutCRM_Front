@@ -1,12 +1,16 @@
 import {Injectable} from "@angular/core";
 import {BaseTableColumns} from "../../../models/BaseTableColumns";
+import {AbstractTableService} from "../../../abstract/AbstractTableService";
 
 
 @Injectable()
-export class ExerciseTableService {
+export class ExerciseTableService extends AbstractTableService {
 
+  constructor() {
+    super();
+  }
 
-  public getExerciseTableColumns(): BaseTableColumns[] {
+  public getTableColumns(): BaseTableColumns[] {
     return [
       {field: 'exerciseName', header: 'Название упражнения'},
       {field: 'repeatsCount', header: 'Количество повторений'},

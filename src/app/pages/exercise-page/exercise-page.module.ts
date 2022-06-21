@@ -12,10 +12,13 @@ import {TableModule} from "primeng/table";
 import {ButtonModule} from "primeng/button";
 import {
   AddEditExerciseFormDialogComponent
-} from './components/add-edit-exercise-form-dialog/add-edit-exercise-form-dialog.component';
+} from './dialogs/add-edit-exercise-form-dialog/add-edit-exercise-form-dialog.component';
 import {ExerciseDialogService} from "./services/exercise-dialog.service";
 import {ExerciseFormService} from "./services/exercise-form.service";
 import {DialogService} from "primeng/dynamicdialog";
+import {InputTextModule} from "primeng/inputtext";
+import {ReactiveFormsModule} from "@angular/forms";
+import {InputNumberModule} from "primeng/inputnumber";
 
 
 @NgModule({
@@ -34,7 +37,10 @@ import {DialogService} from "primeng/dynamicdialog";
       }
     ]),
     TableModule,
-    ButtonModule
+    ButtonModule,
+    InputTextModule,
+    ReactiveFormsModule,
+    InputNumberModule
   ],
   providers: [
     ExerciseHttpService,

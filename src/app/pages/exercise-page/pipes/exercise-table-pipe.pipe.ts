@@ -7,13 +7,13 @@ import {Exercise} from "../../../models/Exercise";
 })
 export class ExerciseTablePipePipe implements PipeTransform {
   transform(value: Exercise, field: string): string {
-    const fieldDict: { [key: string]: any } = {
+    const fieldDict = {
       exerciseName: value.exerciseName,
       repeatsCount: value.repeatsCount,
       repeatsCountTimeout: value.repeatsCountTimeout,
     }
 
-    return fieldDict[field] || '-'
+    return fieldDict[field] || value[field] || '-'
   }
 
 }
