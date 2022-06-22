@@ -7,6 +7,7 @@ import {WorkoutStateHandlerService} from "../../services/workout-state-handler.s
 import {ExerciseStateService} from "../../../exercise-page/services/exercise-state.service";
 import {ExerciseStateHandlerService} from "../../../exercise-page/services/exercise-state-handler.service";
 import {Exercise} from "../../../../models/Exercise";
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -30,7 +31,8 @@ export class WorkoutCreateFormComponent implements OnInit {
     private readonly stateHandlerType: WorkoutTypesStateHandlerService,
     private readonly exerciseState: ExerciseStateService,
     private readonly exerciseHandler: ExerciseStateHandlerService,
-    private readonly form: WorkoutFormService
+    private readonly form: WorkoutFormService,
+    private readonly router: Router
   ) {
   }
 
@@ -42,5 +44,9 @@ export class WorkoutCreateFormComponent implements OnInit {
 
   public submitForm(): void {
     this.stateHandlerWorkout.createWorkout({...this.workoutForm.value})
+  }
+
+  public navigateToExercise(): void {
+    this.router.navigate(['/exercises']);
   }
 }

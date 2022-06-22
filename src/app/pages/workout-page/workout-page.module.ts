@@ -29,7 +29,9 @@ import {ExerciseStateService} from "../exercise-page/services/exercise-state.ser
 import {ExerciseStateHandlerService} from "../exercise-page/services/exercise-state-handler.service";
 import {ExerciseHttpService} from "../exercise-page/services/exercise-http.service";
 import {ExerciseTableService} from "../exercise-page/services/exercise-table.service";
-import { WorkoutEditDialogFormComponent } from './dialogs/workout-edit-dialog-form/workout-edit-dialog-form.component';
+import {WorkoutEditDialogFormComponent} from './dialogs/workout-edit-dialog-form/workout-edit-dialog-form.component';
+import {WorkoutDialogService} from "./services/workout-dialog.service";
+import {DialogService} from "primeng/dynamicdialog";
 
 
 @NgModule({
@@ -69,6 +71,8 @@ import { WorkoutEditDialogFormComponent } from './dialogs/workout-edit-dialog-fo
     ExerciseStateHandlerService,
     ExerciseHttpService,
     ExerciseTableService,
+    WorkoutDialogService,
+    DialogService,
     FormBuilder,
     {provide: BASE_CARD_CONFIG_TOKEN, useValue: WorkoutLoadCardConfig}
   ]

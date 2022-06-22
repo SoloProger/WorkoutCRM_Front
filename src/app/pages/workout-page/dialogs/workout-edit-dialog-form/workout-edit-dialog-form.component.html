@@ -13,28 +13,28 @@
            formControlName="cyclesCountTimeout">
   </div>
   <div class="form-controls">
-<!--    <p-multiSelect-->
-<!--      [options]="exercises$ | async"-->
-<!--      [showClear]="true"-->
-<!--      placeholder="Упражнения"-->
-<!--      optionLabel="exerciseName"-->
-<!--      formControlName="exercises"-->
-<!--      appendTo="body"-->
-<!--      display="chip"></p-multiSelect>-->
-<!--    <p-dropdown-->
-<!--      [options]="types"-->
-<!--      optionValue="id"-->
-<!--      [showClear]="true"-->
-<!--      formControlName="workoutTypeId"-->
-<!--      placeholder="Тип тренировки"-->
-<!--      appendTo="body"-->
-<!--      [autoDisplayFirst]="false"-->
-<!--      optionLabel="typeName"></p-dropdown>-->
+    <p-multiSelect
+      [options]="exercises$ | async"
+      [showClear]="true"
+      placeholder="Упражнения"
+      optionLabel="exerciseName"
+      formControlName="exercises"
+      appendTo="body"
+      display="chip"></p-multiSelect>
+    <p-dropdown
+      [options]="types$ | async"
+      optionValue="id"
+      [showClear]="true"
+      formControlName="workoutTypeId"
+      placeholder="Тип тренировки"
+      appendTo="body"
+      [autoDisplayFirst]="false"
+      optionLabel="typeName"></p-dropdown>
   </div>
   <div class="form-btns">
-    <button pButton label="Добавить упражнение к тренировке" class="p-button-secondary"></button>
-    <button pButton label="Добавить новый тип тренировки" class="p-button-secondary"></button>
-    <button pButton label="Создать тренировку" class="p-button-success" type="submit"
+    <button pButton label="Сохранить" class="p-button-success" type="submit"
             [disabled]="workoutForm.invalid"></button>
+    <button pButton label="Отмена" class="p-button-danger" type="reset"
+            (click)="dialogClose()"></button>
   </div>
 </form>

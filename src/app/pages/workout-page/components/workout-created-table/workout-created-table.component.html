@@ -16,7 +16,7 @@
       </td>
       <td>
         <div class="table-btns">
-          <button pButton icon="pi pi-pencil" class="p-button-success"></button>
+          <button pButton icon="pi pi-pencil" class="p-button-success" (click)="openWorkoutDialog(workout)"></button>
           <button pButton icon="pi pi-cloud-download" class="p-button-warning"></button>
           <button pButton icon="pi pi-trash" class="p-button-danger" (click)="deleteWorkout(workout.id)"></button>
         </div>

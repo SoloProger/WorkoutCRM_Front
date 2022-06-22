@@ -1,28 +1,59 @@
 {
   "workouts": [
     {
-      "workoutName": "Тренировка 1",
+      "workoutName": null,
       "exerciseTimeout": null,
       "setsCountTimeout": null,
       "cyclesCountTimeout": null,
       "cyclesCount": null,
       "setsCount": null,
       "workoutTypeId": null,
-      "exercises": [
-        {
-          "exerciseName": "Приседания",
-          "repeatsCount": 20,
-          "repeatsCountTimeout": "40 сек",
-          "id": 1
-        },
-        {
-          "exerciseName": "Подтягивания",
-          "repeatsCount": 12,
-          "repeatsCountTimeout": "60 сек",
-          "id": 4
-        }
-      ],
+      "exercises": null,
       "id": 1
+    },
+    {
+      "workoutName": null,
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": null,
+      "id": 2
+    },
+    {
+      "workoutName": null,
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": null,
+      "id": 3
+    },
+    {
+      "workoutName": null,
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": null,
+      "id": 4
+    },
+    {
+      "workoutName": null,
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": null,
+      "id": 5
     }
   ],
   "workoutTypes": [

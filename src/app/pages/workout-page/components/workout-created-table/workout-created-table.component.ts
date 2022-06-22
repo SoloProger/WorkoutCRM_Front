@@ -3,6 +3,7 @@ import {WorkoutStateHandlerService} from "../../services/workout-state-handler.s
 import {WorkoutCreatedTableService} from "../../services/workout-created-table.service";
 import {BaseTableColumns} from "../../../../models/BaseTableColumns";
 import {Workout} from "../../../../models/Workout";
+import {WorkoutDialogService} from "../../services/workout-dialog.service";
 
 @Component({
   selector: 'app-workout-created-table',
@@ -21,6 +22,7 @@ export class WorkoutCreatedTableComponent implements OnInit {
   constructor(
     private readonly stateHandler: WorkoutStateHandlerService,
     private readonly workoutTableService: WorkoutCreatedTableService,
+    private readonly workoutDialog: WorkoutDialogService,
   ) {
   }
 
@@ -32,5 +34,14 @@ export class WorkoutCreatedTableComponent implements OnInit {
     this.stateHandler.deleteWorkout(id);
   }
 
+  public openWorkoutDialog(workout: Workout): void {
+    this.workoutDialog.openWorkoutDialog(workout).subscribe(rawWorkout => {
+      this.editWorkout(rawWorkout, workout.id);
+    })
+  }
+
+  public editWorkout(workout: Workout, id: number): void {
+    this.stateHandler.updateWorkout(workout, id);
+  }
 
 }
