@@ -1,5 +1,6 @@
 import {Injectable} from "@angular/core";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Workout} from "../../../models/Workout";
 
 
 @Injectable()
@@ -18,5 +19,12 @@ export class WorkoutFormService {
       workoutTypeId: [null],
       exercises: [null, Validators.required]
     });
+  }
+
+  public fillForm(form: FormGroup, workout: Workout): void {
+    if (!workout) return;
+    form.patchValue({
+      ...workout,
+    })
   }
 }

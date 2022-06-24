@@ -9,9 +9,9 @@ import {WorkoutCreatedTableComponent} from './components/workout-created-table/w
 import {InputTextModule} from "primeng/inputtext";
 import {DropdownModule} from "primeng/dropdown";
 import {ButtonModule} from "primeng/button";
-import {WorkoutTypesStateService} from "./services/workout-types-state.service";
-import {WorkoutTypesStateHandlerService} from "./services/workout-types-state-handler.service";
-import {WorkoutTypesHttpService} from "./services/workout-types-http.service";
+import {WorkoutTypesStateService} from "../workout-type/services/workout-types-state.service";
+import {WorkoutTypesStateHandlerService} from "../workout-type/services/workout-types-state-handler.service";
+import {WorkoutTypesHttpService} from "../workout-type/services/workout-types-http.service";
 import {TableModule} from "primeng/table";
 import {WorkoutCreatedTableService} from "./services/workout-created-table.service";
 import {WorkoutHttpService} from "./services/workout-http.service";
@@ -29,6 +29,10 @@ import {ExerciseStateService} from "../exercise-page/services/exercise-state.ser
 import {ExerciseStateHandlerService} from "../exercise-page/services/exercise-state-handler.service";
 import {ExerciseHttpService} from "../exercise-page/services/exercise-http.service";
 import {ExerciseTableService} from "../exercise-page/services/exercise-table.service";
+import {WorkoutEditDialogFormComponent} from './dialogs/workout-edit-dialog-form/workout-edit-dialog-form.component';
+import {WorkoutDialogService} from "./services/workout-dialog.service";
+import {DialogService} from "primeng/dynamicdialog";
+import {WorkoutTypeModule} from "../workout-type/workout-type.module";
 
 
 @NgModule({
@@ -39,6 +43,7 @@ import {ExerciseTableService} from "../exercise-page/services/exercise-table.ser
     WorkoutCreateFormComponent,
     WorkoutCreatedTableComponent,
     WorkoutLoadListComponent,
+    WorkoutEditDialogFormComponent,
   ],
   imports: [
     RouterModule.forChild([
@@ -53,11 +58,9 @@ import {ExerciseTableService} from "../exercise-page/services/exercise-table.ser
     BaseCardModule,
     MultiSelectModule,
     ReactiveFormsModule,
+    WorkoutTypeModule,
   ],
   providers: [
-    WorkoutTypesStateService,
-    WorkoutTypesStateHandlerService,
-    WorkoutTypesHttpService,
     WorkoutCreatedTableService,
     WorkoutHttpService,
     WorkoutStateService,
@@ -67,6 +70,8 @@ import {ExerciseTableService} from "../exercise-page/services/exercise-table.ser
     ExerciseStateHandlerService,
     ExerciseHttpService,
     ExerciseTableService,
+    WorkoutDialogService,
+    DialogService,
     FormBuilder,
     {provide: BASE_CARD_CONFIG_TOKEN, useValue: WorkoutLoadCardConfig}
   ]

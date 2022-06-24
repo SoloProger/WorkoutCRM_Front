@@ -1,4 +1,4 @@
-<p-table [value]="exercises" [columns]="columns" [loading]="isLoading$ | async">
+<p-table [value]="types" [columns]="columns" [loading]="isLoading$ | async">
   <ng-template pTemplate="header">
     <tr>
       <th *ngFor="let column of columns">
@@ -12,15 +12,14 @@
   <ng-template pTemplate="body" let-exercise>
     <tr>
       <td *ngFor="let column of columns">
-        {{exercise | exerciseTablePipe: column.field }}
+        {{exercise | workoutTypeTablePipe: column.field }}
       </td>
       <td>
         <div class="table-btns">
           <button pButton icon="pi pi-pencil" class="p-button-success"
                   (click)="openCreateEditDialog.emit(exercise)"></button>
-          <button pButton icon="pi pi-cloud-download" class="p-button-warning"></button>
           <button pButton icon="pi pi-trash" class="p-button-danger"
-                  (click)="removeExercise.emit(exercise.id)"></button>
+                  (click)="deleteWorkoutType.emit(exercise.id)"></button>
         </div>
       </td>
     </tr>
@@ -28,10 +27,7 @@
   <ng-template pTemplate="emptymessage">
     <tr>
       <td [attr.colspan]="columns.length">
-        Упражнения отсутствуют
-      </td>
-      <td>
-        Действия отсутствуют
+        Типы тренировок отсутствуют
       </td>
     </tr>
   </ng-template>

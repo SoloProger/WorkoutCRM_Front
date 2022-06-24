@@ -24,6 +24,10 @@ export class WorkoutStateHandlerService {
     this.api.create(workout).subscribe(data => this.state.createValue(data));
   }
 
+  public updateWorkout(workout: Workout, id: number): void {
+    this.table.startLoading(this.api.update(id, workout)).subscribe((data) => this.state.updateValue(data))
+  }
+
   public deleteWorkout(id: number): void {
     this.table.startLoading(this.api.delete(id)).subscribe(() => this.state.deleteValue(id));
   }
