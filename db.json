@@ -1,59 +1,52 @@
 {
   "workouts": [
     {
-      "workoutName": null,
+      "workoutName": "Тренировка 1",
       "exerciseTimeout": null,
       "setsCountTimeout": null,
       "cyclesCountTimeout": null,
       "cyclesCount": null,
       "setsCount": null,
       "workoutTypeId": null,
-      "exercises": null,
+      "exercises": [
+        {
+          "exerciseName": "Приседания",
+          "repeatsCount": 20,
+          "repeatsCountTimeout": "40 сек",
+          "id": 1
+        },
+        {
+          "exerciseName": "Приседания",
+          "repeatsCount": 13,
+          "repeatsCountTimeout": "41 сек",
+          "id": 2
+        }
+      ],
       "id": 1
     },
     {
-      "workoutName": null,
+      "workoutName": "Тренировка 1",
       "exerciseTimeout": null,
       "setsCountTimeout": null,
       "cyclesCountTimeout": null,
       "cyclesCount": null,
       "setsCount": null,
       "workoutTypeId": null,
-      "exercises": null,
+      "exercises": [
+        {
+          "exerciseName": "Приседания",
+          "repeatsCount": 20,
+          "repeatsCountTimeout": "40 сек",
+          "id": 1
+        },
+        {
+          "exerciseName": "Приседания",
+          "repeatsCount": 13,
+          "repeatsCountTimeout": "41 сек",
+          "id": 2
+        }
+      ],
       "id": 2
-    },
-    {
-      "workoutName": null,
-      "exerciseTimeout": null,
-      "setsCountTimeout": null,
-      "cyclesCountTimeout": null,
-      "cyclesCount": null,
-      "setsCount": null,
-      "workoutTypeId": null,
-      "exercises": null,
-      "id": 3
-    },
-    {
-      "workoutName": null,
-      "exerciseTimeout": null,
-      "setsCountTimeout": null,
-      "cyclesCountTimeout": null,
-      "cyclesCount": null,
-      "setsCount": null,
-      "workoutTypeId": null,
-      "exercises": null,
-      "id": 4
-    },
-    {
-      "workoutName": null,
-      "exerciseTimeout": null,
-      "setsCountTimeout": null,
-      "cyclesCountTimeout": null,
-      "cyclesCount": null,
-      "setsCount": null,
-      "workoutTypeId": null,
-      "exercises": null,
-      "id": 5
     }
   ],
   "workoutTypes": [
