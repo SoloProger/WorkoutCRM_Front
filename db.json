@@ -47,16 +47,89 @@
         }
       ],
       "id": 2
-    }
-  ],
-  "workoutTypes": [
-    {
-      "id": 1,
-      "typeName": "Силовая тренировка"
     },
     {
-      "id": 2,
-      "typeName": "Выносливость"
+      "workoutName": null,
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": null,
+      "id": 3
+    },
+    {
+      "workoutName": null,
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": null,
+      "id": 4
+    },
+    {
+      "workoutName": null,
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": null,
+      "id": 5
+    },
+    {
+      "workoutName": null,
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": null,
+      "id": 6
+    },
+    {
+      "workoutName": null,
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": null,
+      "id": 7
+    },
+    {
+      "workoutName": null,
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": null,
+      "id": 8
+    },
+    {
+      "workoutName": null,
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": null,
+      "id": 9
+    }
+  ],
+  "workout-types": [
+    {
+      "typeName": "Выносливость",
+      "id": 2
     },
     {
       "id": 3,

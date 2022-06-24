@@ -1,0 +1,5 @@
+<app-workout-type-table-dialog
+  (deleteWorkoutType)="onDeleteType($event)"
+  (openCreateEditDialog)="openWorkoutTypeDialog($event)"
+  [types]="types$ | async"
+></app-workout-type-table-dialog>

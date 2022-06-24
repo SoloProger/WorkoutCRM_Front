@@ -3,8 +3,8 @@ import {FormGroup} from "@angular/forms";
 import {DynamicDialogConfig, DynamicDialogRef} from "primeng/dynamicdialog";
 import {WorkoutFormService} from "../../services/workout-form.service";
 import {Workout} from "../../../../models/Workout";
-import {WorkoutTypesStateService} from "../../services/workout-types-state.service";
-import {WorkoutTypesStateHandlerService} from "../../services/workout-types-state-handler.service";
+import {WorkoutTypesStateService} from "../../../workout-type/services/workout-types-state.service";
+import {WorkoutTypesStateHandlerService} from "../../../workout-type/services/workout-types-state-handler.service";
 import {ExerciseStateService} from "../../../exercise-page/services/exercise-state.service";
 import {ExerciseStateHandlerService} from "../../../exercise-page/services/exercise-state-handler.service";
 
@@ -19,7 +19,7 @@ export class WorkoutEditDialogFormComponent implements OnInit {
 
   public exercises$ = this.exercisesState.state$;
 
-  public types$ = this.stateTypes.workoutTypes$;
+  public types$ = this.stateTypes.state$;
 
   constructor(
     private readonly form: WorkoutFormService,
@@ -35,7 +35,7 @@ export class WorkoutEditDialogFormComponent implements OnInit {
   ngOnInit(): void {
     this.workoutForm = this.form.createForm()
     this.form.fillForm(this.workoutForm, this.config.data?.workout)
-    this.stateHandlerTypes.handlerTypes();
+    this.stateHandlerTypes.getWorkoutTypes();
     this.exercisesStateHandler.getExercises();
   }
 

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {WorkoutTypesStateService} from "../../services/workout-types-state.service";
-import {WorkoutTypesStateHandlerService} from "../../services/workout-types-state-handler.service";
+import {WorkoutTypesStateService} from "../../../workout-type/services/workout-types-state.service";
+import {WorkoutTypesStateHandlerService} from "../../../workout-type/services/workout-types-state-handler.service";
 import {FormGroup} from "@angular/forms";
 import {WorkoutFormService} from "../../services/workout-form.service";
 import {WorkoutStateHandlerService} from "../../services/workout-state-handler.service";
@@ -19,7 +19,7 @@ export class WorkoutCreateFormComponent implements OnInit {
 
   public workoutForm!: FormGroup;
 
-  public types$ = this.stateType.workoutTypes$;
+  public types$ = this.stateType.state$;
 
   public exercises$ = this.exerciseState.state$;
 
@@ -38,7 +38,7 @@ export class WorkoutCreateFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.workoutForm = this.form.createForm();
-    this.stateHandlerType.handlerTypes();
+    this.stateHandlerType.getWorkoutTypes();
     this.exerciseHandler.getExercises();
   }
 

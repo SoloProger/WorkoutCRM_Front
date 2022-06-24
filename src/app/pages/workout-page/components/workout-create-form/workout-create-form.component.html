@@ -32,8 +32,10 @@
       optionLabel="typeName"></p-dropdown>
   </div>
   <div class="form-btns">
-    <button pButton label="Добавить новое упражнение" (click)="navigateToExercise()" class="p-button-secondary"></button>
-    <button pButton label="Добавить новый тип тренировки" class="p-button-secondary"></button>
+    <button pButton label="Добавить новое упражнение" (click)="navigateToExercise()"
+            class="p-button-secondary"></button>
+
+    <!--    <button pButton label="Добавить новый тип тренировки" class="p-button-secondary"></button>-->
     <button pButton label="Создать тренировку" class="p-button-success" type="submit"
             [disabled]="workoutForm.invalid"></button>
   </div>
