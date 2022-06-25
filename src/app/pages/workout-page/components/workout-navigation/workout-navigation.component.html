@@ -1,6 +1,9 @@
 <p-tabMenu [model]="workoutTabs"></p-tabMenu>
 <div *ngIf="activeWorkoutTab === 0" class="workout-create-form">
   <app-workout-create-form></app-workout-create-form>
+  <div class="workout-types">
+    <app-workout-type-init></app-workout-type-init>
+  </div>
 </div>
 <div *ngIf="activeWorkoutTab === 1" class="workout-created-table">
   <app-workout-created-table [workouts]="workouts$ | async"></app-workout-created-table>
