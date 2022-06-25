@@ -9,6 +9,15 @@ const routes: Routes = [
   {
     path: 'exercises',
     loadChildren: () => import('./pages/exercise-page/exercise-page.module').then(m => m.ExercisePageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile-page/profile-page.module').then(m => m.ProfilePageModule)
+  },
+  {
+    path: '',
+    redirectTo: 'profile',
+    pathMatch: 'full'
   }
 ];
 

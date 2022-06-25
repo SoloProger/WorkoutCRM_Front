@@ -1,0 +1,12 @@
+:host {
+  .profile {
+    display: flex;
+    gap: 5rem;
+  }
+
+  .forms{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
