@@ -90,5 +90,25 @@
       "repeatsCountTimeout": "60 сек",
       "id": 5
     }
+  ],
+  "goals": [
+    {
+      "id": 1,
+      "goal": "Цель 1",
+      "description": "Описание цели",
+      "status": false
+    },
+    {
+      "id": 2,
+      "goal": "Цель 2",
+      "description": "Описание цели",
+      "status": false
+    },
+    {
+      "id": 3,
+      "goal": "Цель 3",
+      "description": "Описание цели",
+      "status": false
+    }
   ]
 }
