@@ -94,21 +94,18 @@
   "goals": [
     {
       "id": 1,
-      "goal": "Цель 1",
-      "description": "Описание цели",
-      "status": false
+      "goalTitle": "Цель 1",
+      "status": "Сделать"
     },
     {
       "id": 2,
-      "goal": "Цель 2",
-      "description": "Описание цели",
-      "status": false
+      "goalTitle": "Цель 2",
+      "status": "Сделать"
     },
     {
       "id": 3,
-      "goal": "Цель 3",
-      "description": "Описание цели",
-      "status": false
+      "goalTitle": "Цель 3",
+      "status": "Сделать"
     }
   ]
 }

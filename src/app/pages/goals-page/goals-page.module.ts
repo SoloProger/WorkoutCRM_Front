@@ -6,6 +6,18 @@ import {
   AddEditGoalsFormDialogComponent
 } from './dialogs/add-edit-goals-form-dialog/add-edit-goals-form-dialog.component';
 import {GoalsTablePipe} from './pipes/goals-table.pipe';
+import {TableModule} from "primeng/table";
+import {GoalsDialogService} from "./services/goals-dialog.service";
+import {GoalsHttpService} from "./services/goals-http.service";
+import {GoalsTableService} from "./services/goals-table.service";
+import {GoalsStateService} from "./services/goals-state.service";
+import {GoalsStateHandlerService} from "./services/goals-state-handler.service";
+import {ButtonModule} from "primeng/button";
+import {RouterModule} from "@angular/router";
+import {DialogService} from "primeng/dynamicdialog";
+import {InputTextModule} from "primeng/inputtext";
+import {ReactiveFormsModule} from "@angular/forms";
+import {GoalsFormService} from "./services/goals-form.service";
 
 
 @NgModule({
@@ -16,7 +28,26 @@ import {GoalsTablePipe} from './pipes/goals-table.pipe';
     GoalsTablePipe,
   ],
   imports: [
-    CommonModule
+    RouterModule.forChild([
+      {
+        path: '',
+        component: GoalsPageComponent
+      }
+    ]),
+    CommonModule,
+    TableModule,
+    ButtonModule,
+    InputTextModule,
+    ReactiveFormsModule
+  ],
+  providers: [
+    GoalsDialogService,
+    GoalsHttpService,
+    GoalsTableService,
+    GoalsStateService,
+    GoalsStateHandlerService,
+    GoalsFormService,
+    DialogService
   ]
 })
 export class GoalsPageModule {

@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {GoalsStateService} from "./services/goals-state.service";
+import {GoalsStateHandlerService} from "./services/goals-state-handler.service";
+import {GoalsDialogService} from "./services/goals-dialog.service";
+import {Goal} from "../../models/Goal";
 
 @Component({
   selector: 'app-goals-page',
@@ -7,9 +11,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoalsPageComponent implements OnInit {
 
-  constructor() { }
+  public goals$ = this.state.state$;
+
+  constructor(
+    private readonly state: GoalsStateService,
+    private readonly handler: GoalsStateHandlerService,
+    private readonly dialog: GoalsDialogService
+  ) {
+  }
 
   ngOnInit(): void {
+    this.handler.getGoals();
+  }
+
+  public openGoalsDialog(goal: Goal): void {
+    this.dialog.openGoalsDialog(goal).subscribe(
+      rawGoal =>
+        goal
+          ? this.onUpdateGoal(rawGoal, goal.id)
+          : this.onAddGoal(rawGoal)
+    );
+  }
+
+  public onAddGoal(goal: Goal): void {
+    this.handler.getGoals();
+  }
+
+  public onUpdateGoal(goal: Goal, id: number): void {
+    this.handler.updateGoal(goal, id);
+  }
+
+  public onDeleteGoal(id: number): void {
+    this.handler.deleteGoal(id);
   }
 
 }

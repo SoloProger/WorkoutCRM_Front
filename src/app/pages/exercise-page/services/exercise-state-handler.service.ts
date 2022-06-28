@@ -23,7 +23,6 @@ export class ExerciseStateHandlerService {
     this.table
       .startLoading(this.api.create(exercise))
       .subscribe(data => {
-        console.log(data);
         this.state.createValue(data)
       })
   }
