@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {FormBuilder, FormGroup, Validator, Validators} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Exercise} from "../../../models/Exercise";
 
 

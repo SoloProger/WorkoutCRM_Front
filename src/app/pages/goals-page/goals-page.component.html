@@ -1,0 +1,2 @@
+<app-goals-page-table [goals]="goals$ | async" (openCreateEditDialog)="openGoalsDialog($event)"
+                      (removeGoal)="onDeleteGoal($event)"></app-goals-page-table>
