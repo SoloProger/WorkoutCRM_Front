@@ -26,7 +26,6 @@ export class GoalsStateHandlerService {
     this.table
       .startLoading(this.api.create(goal))
       .subscribe(data => {
-        console.log(data);
         this.state.createValue(data)
       })
   }

@@ -34,7 +34,7 @@ export class GoalsPageComponent implements OnInit {
   }
 
   public onAddGoal(goal: Goal): void {
-    this.handler.getGoals();
+    this.handler.addGoal(goal);
   }
 
   public onUpdateGoal(goal: Goal, id: number): void {

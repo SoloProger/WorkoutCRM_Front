@@ -98,14 +98,14 @@
       "status": "Сделать"
     },
     {
-      "id": 2,
-      "goalTitle": "Цель 2",
-      "status": "Сделать"
+      "goalTitle": "Цель 3",
+      "status": "Сделать2",
+      "id": 2
     },
     {
-      "id": 3,
-      "goalTitle": "Цель 3",
-      "status": "Сделать"
+      "goalTitle": "Цель 2",
+      "status": "Просрочено",
+      "id": 3
     }
   ]
 }
