@@ -19,6 +19,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/goals-page/goals-page.module').then(m => m.GoalsPageModule)
   },
   {
+    path: 'timetable',
+    loadChildren: () => import('./pages/timetable/timetable.module').then(m => m.TimetableModule)
+  },
+  {
     path: '',
     redirectTo: 'profile',
     pathMatch: 'full'
