@@ -1,1 +1,36 @@
-<p>calendar works!</p>
+<table>
+  <thead>
+  <tr>
+    <th *ngFor="let column of columns" class="calendar-columns">
+      {{column.header}}
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td *ngFor="let idx of count" class="calendar-rows">
+      {{idx}}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let idx of count2" class="calendar-rows">
+      {{idx}}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let idx of count3" class="calendar-rows">
+      {{idx}}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let idx of count4" class="calendar-rows">
+      {{idx}}
+    </td>
+  </tr>
+  <tr>
+    <td *ngFor="let idx of count5" class="calendar-rows">
+      {{idx}}
+    </td>
+  </tr>
+  </tbody>
+</table>
