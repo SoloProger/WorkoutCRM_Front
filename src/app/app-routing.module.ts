@@ -3,6 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'main',
+    loadChildren: () =>
+      import('./pages/main-page/main-page.module').then(
+        (m) => m.MainPageModule
+      ),
+  },
+  {
     path: 'workouts',
     loadChildren: () =>
       import('./pages/workout-page/workout-page.module').then(
@@ -37,11 +44,11 @@ const routes: Routes = [
         (m) => m.TimetableModule
       ),
   },
-  // {
-  //   path: '',
-  //   redirectTo: 'profile',
-  //   pathMatch: 'full'
-  // }
+  {
+    path: '',
+    redirectTo: 'main',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
