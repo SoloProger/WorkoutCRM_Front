@@ -47,6 +47,39 @@
         }
       ],
       "id": 2
+    },
+    {
+      "workoutName": null,
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": null,
+      "id": 4
+    },
+    {
+      "workoutName": null,
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": null,
+      "id": 5
+    },
+    {
+      "workoutName": null,
+      "exerciseTimeout": null,
+      "setsCountTimeout": null,
+      "cyclesCountTimeout": null,
+      "cyclesCount": null,
+      "setsCount": null,
+      "workoutTypeId": null,
+      "exercises": null,
+      "id": 6
     }
   ],
   "workout-types": [

@@ -21,6 +21,10 @@
       formControlName="exercises"
       appendTo="body"
       display="chip"></p-multiSelect>
+    <button pButton icon="pi pi-plus" [pTooltip]="'Добавить новое упражнение'"
+            tooltipPosition="bottom" (click)="navigateToExercise()"
+            class="p-button-secondary"
+    ></button>
     <p-dropdown
       [options]="types$ | async "
       optionValue="id"
@@ -30,12 +34,9 @@
       appendTo="body"
       [autoDisplayFirst]="false"
       optionLabel="typeName"></p-dropdown>
+    <app-workout-type-init></app-workout-type-init>
   </div>
   <div class="form-btns">
-    <button pButton label="Добавить новое упражнение" (click)="navigateToExercise()"
-            class="p-button-secondary"></button>
-
-    <!--    <button pButton label="Добавить новый тип тренировки" class="p-button-secondary"></button>-->
     <button pButton label="Создать тренировку" class="p-button-success" type="submit"
             [disabled]="workoutForm.invalid"></button>
   </div>
